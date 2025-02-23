@@ -131,6 +131,11 @@ body::after {
   text-align: center;
 }
 
+.skill-box:active {
+  transform: scale(0.95) translateY(5px);
+  transition: transform 0.1s;
+}
+
 .fa-code {
   color: #00ccff; /* আইকনের কালার */
   font-size: 24px; /* সাইজ */
@@ -262,5 +267,32 @@ body::after {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
+  }
+}
+
+
+.design-credit {
+  text-align: center;
+  padding: 20px 0;
+  color: rgba(255, 255, 255, 0.8); /* সেমি-ট্রান্সপারেন্ট সাদা */
+  font-size: 0.9rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.design-credit a {
+  color: #ff6f61; /* আপনার থিম কালার */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.design-credit a:hover {
+  color: #00ccff; /* হোভার কালার */
+}
+
+/* মোবাইল ভার্সন */
+@media (max-width: 768px) {
+  .design-credit {
+    font-size: 0.8rem;
+    padding: 15px 0;
   }
 }

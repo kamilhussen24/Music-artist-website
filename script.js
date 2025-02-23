@@ -25,3 +25,21 @@ document.querySelectorAll('.skill-box').forEach(box => {
     box.style.transform = 'rotateX(0) rotateY(0)';
   });
 });
+
+// স্কিল বক্স সিলেক্ট করুন এবং সাউন্ড ইভেন্ট যুক্ত আপডেটেড
+const notes = ['C', 'D', 'E', 'F', 'G', 'A']; // ৬টি নোট
+
+document.querySelectorAll('.skill-box').forEach((box, index) => {
+  box.dataset.note = notes[index]; // প্রতিটি বক্সে ১টি নোট
+  
+  box.addEventListener('click', () => {
+    const note = box.dataset.note;
+    const audio = document.getElementById(`${note}_note`);
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    } else {
+      console.error('Audio not found:', note); // এরর লগ করুন
+    }
+  });
+});
