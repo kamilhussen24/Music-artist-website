@@ -5,19 +5,39 @@
   box-sizing: border-box;
 }
 
+/* নতুন ব্যাকগ্রাউন্ড স্টাইল যোগ করুন */
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #1A1A1A, #E4DA42, #fbc2eb, #1A1A1A, #f6d365);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color: #333;
+  position: relative;
+  min-height: 100vh;
+  color: #333; /* টেক্সট কালার (প্রয়োজন হলে সাদা করুন) */
 }
 
-/* Background Animation */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* ব্লার ইমেজ ব্যাকগ্রাউন্ড */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://raw.githubusercontent.com/kamilhussen24/kamilhussen24.github.io/refs/heads/main/Image/background.jpg') no-repeat center center/cover; /* আপনার ছবির পাথ দিন */
+  filter: blur(5px);
+  z-index: -1;
+}
+
+/* ডার্ক ওভারলে */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
 /* Door Loader */
@@ -39,7 +59,7 @@ body {
   position: absolute;
   width: 50%;
   height: 100%;
-  background: #ff6f61;
+  background: #00ccff;
   transition: transform 1.5s ease-in-out;
 }
 
@@ -111,6 +131,12 @@ body {
   text-align: center;
 }
 
+.fa-code {
+  color: #00ccff; /* আইকনের কালার */
+  font-size: 24px; /* সাইজ */
+  margin-right: 10px; /* টেক্সটের সাথে ফাঁকা */
+}
+
 .skills-section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -136,6 +162,10 @@ body {
   position: relative;
   overflow: hidden;
 }
+.skill-box.coding {
+  background: linear-gradient(45deg, #ff00cc, #6600cc); /* পার্পল গ্রেডিয়েন্ট */
+}
+
 
 .skill-box:hover {
   transform: translateY(-10px) scale(1.05);
