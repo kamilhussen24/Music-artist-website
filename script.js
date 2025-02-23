@@ -43,3 +43,7 @@ document.querySelectorAll('.skill-box').forEach((box, index) => {
     }
   });
 });
+document.querySelector('.email-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.location.href = 'mailto:kamil.chat24@icloud.com';
+});
