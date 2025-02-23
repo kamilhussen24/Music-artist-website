@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Sitemap: https://kamilhussen24.vercel.app/sitemap.xml
 Sitemap: https://kamilhussen24.github.io/sitemap.xml
